@@ -1,18 +1,22 @@
 <?php
 include_once("classes/questionClass.php");
-$lklkerl;
-if(isset($_GET["questions"]))  {
-    $lklkerl=getquests();
-}
+if ($_GET['data'] == 'questions') {
+    echo json_encode(getquests());
+  } elseif ($_GET['data'] == 'answers') {
+    echo json_encode(array('data' => correctAnswers()));
+  }
 
-if(){
-    
-}
 
 function getquests(){
     $test = Questions::getquestions();
     return $test;
 }
 
-echo json_encode(getquests());
+function correctAnswers(){
+    $corrects = Questions::getCorrectAnswers();
+    return $corrects;
+}
+// echo json_encode(getquests());
+// echo json_encode(getquests());
+// echo json_encode(correctAnswers());
 ?>

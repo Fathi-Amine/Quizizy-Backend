@@ -17,6 +17,15 @@ class Questions extends DatabaseConnection{
         $res = $stmt->fetchAll();
         return $res;
     }
+
+    public static function getCorrectAnswers(){
+        $sql = "SELECT answer,quest_id From answers Where iscorrect = 1";
+        $db = new DatabaseConnection();
+        $pdo = $db->connect();
+        $stmt = $pdo->query($sql);
+        $res = $stmt->fetchAll();
+        return $res;
+    }
 }
 
 ?>
