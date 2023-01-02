@@ -3,7 +3,7 @@ include_once("classes/questionClass.php");
 if (isset($_GET['data']) && $_GET['data'] == 'questions') {
     echo json_encode(getquests());
   } elseif (isset($_GET['data']) && $_GET['data'] == 'answers') {
-    echo json_encode(array('data' => correctAnswers()));
+    echo json_encode(correctAnswers());
   }
 if(isset($_POST['data'])){
   echo json_encode(iscorrect($_POST['data']));

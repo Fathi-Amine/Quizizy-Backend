@@ -24,7 +24,7 @@ class Questions extends DatabaseConnection{
     }
 
     public static function getCorrectAnswers(){
-        $sql = "SELECT answer,quest_id From answers Where iscorrect = 1";
+        $sql = "SELECT id,answer,quest_id From answers Where iscorrect = 1";
         $db = new DatabaseConnection();
         $pdo = $db->connect();
         $stmt = $pdo->query($sql);
