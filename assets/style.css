@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background-color: #251749;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+ul[id] {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+p,
+h1,
+h3 {
+  margin: 0;
+}
+
+.btn {
+  background: #251749;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 7px 0px #263159;
+  display: inline-block;
+  transition: all 0.2s;
+  position: relative;
+  padding: 20px 25px;
+  position: relative;
+  top: 0;
+  cursor: pointer;
+  margin: 0 20px;
+}
+.btn:active {
+  top: 3px;
+  box-shadow: 0 2px 0px #495579;
+  transition: all 0.2s;
+}
+
+.wrapper {
+  max-width: 37.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+  margin: 0 auto;
+  background-color: #495579;
+}
+.wrapper #progress {
+  position: relative;
+  margin-bottom: 30px;
+}
+.wrapper #progress #progress-bar {
+  position: absolute;
+  background: #263159;
+  height: 5px;
+  width: 0%;
+  top: 45%;
+  left: 0;
+  z-index: 1;
+}
+.wrapper #progress #progress-num {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper #progress #progress-num::before {
+  content: "";
+  background-color: #FFFBEB;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  z-index: 0;
+}
+.wrapper #progress #progress-num .step {
+  border: 3px solid #495579;
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  line-height: 1.5;
+  text-align: center;
+  background-color: #FFFBEB;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+.wrapper #progress #progress-num .step.active {
+  border-color: #263159;
+  background-color: #263159;
+  color: #FFFBEB;
+}
+.wrapper .blocks .input-block .input {
+  display: block;
+  width: 75%;
+  height: 40px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 30px;
+}
+.wrapper .blocks .input-block .input:focus {
+  outline: none;
+}
+.wrapper .blocks .input-block .input::placeholder {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #E7E7E7;
+}
+.wrapper .blocks .info-block {
+  max-width: 75%;
+  display: none;
+  margin: 1rem auto;
+  background-color: #FFFBEB;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+}
+.wrapper .blocks #rules-list {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+.wrapper .blocks #rules-list li {
+  font-size: 0.925rem;
+}
+.wrapper .blocks #rules-list li .rule-number {
+  font-weight: 700;
+  margin-right: 0.25rem;
+}
+.wrapper .blocks .start-block {
+  display: none;
+}
+.wrapper .blocks .start-block .start {
+  display: block;
+  margin: 1rem auto;
+}
+.wrapper .blocks .prog-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.wrapper .quiz-wrapper .quiz-title {
+  text-align: center;
+  margin-top: 1rem;
+  color: #FFFBEB;
+}
+.wrapper .quiz-wrapper .progAndTimer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.wrapper .quiz-wrapper .progAndTimer .progContainer {
+  width: 200px;
+  border: 1px solid #251749;
+  border-radius: 30px;
+  height: 20px;
+}
+.wrapper .quiz-wrapper .progAndTimer .progContainer .progBar {
+  width: 20px;
+  height: 18px;
+  background-color: #FFFBEB;
+  border-radius: 30px;
+}
+.wrapper .quiz-wrapper .progAndTimer .time {
+  width: 40px;
+  background-color: #FFFBEB;
+  text-align: center;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+}
+.wrapper .quiz-wrapper .quizz-container .question {
+  text-align: center;
+  color: #FFFBEB;
+}
+.wrapper .quiz-wrapper .quizz-container .answers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.wrapper .quiz-wrapper .quizz-container .answers-container .answerBtn {
+  height: 65px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  border-radius: 12px;
+  padding: 10px 15px;
+}
+.wrapper .quiz-wrapper .quizz-container .next-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.wrapper .resultBoard {
+  margin-top: 1.5rem;
+}
+.wrapper .resultBoard .result-card {
+  margin-top: 1rem;
+  background-color: #FFFBEB;
+  padding: 1rem;
+  border-radius: 12px;
+}
+.wrapper .resultBoard .result-card h3 {
+  color: #251749;
+}
+.wrapper .resultBoard .answersBlock {
+  margin-top: 1rem;
+}
+.wrapper .resultBoard .answersBlock p {
+  height: 65px;
+  margin-bottom: 0.5rem;
+  border-radius: 12px;
+}
+
+.correct {
+  background-color: green;
+}
+
+.false {
+  background-color: red;
+}
+
+.flee {
+  cursor: not-allowed;
+}
+
+.selected {
+  background-color: blue;
+}
+
+.next {
+  display: none;
+}
+
+.result-btn {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
