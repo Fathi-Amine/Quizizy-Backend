@@ -67,6 +67,7 @@ h3{
 }
 .wrapper{
     max-width: 37.5rem;
+    // height: 600px;
     padding: 1rem;
     border-radius: 12px;
     margin: 0 auto;
@@ -184,6 +185,7 @@ h3{
     }
 
     .quiz-wrapper{
+        display: none;
         .quiz-title{
             text-align: center;
             margin-top: 1rem;
@@ -209,6 +211,7 @@ h3{
             }
             .time{
                 width: 40px;
+                height: 30px;
                 background-color: $clr-light;
                 text-align: center;
                 border-radius: 4px;
@@ -247,6 +250,12 @@ h3{
 
     .resultBoard{
         margin-top: 1.5rem;
+        .scoreBanner{
+            font-size: $fs-normal;
+            background-color: $clr-light;
+            border-radius: 12px;
+            text-align: center;
+        }
         .result-card{
             margin-top: 1rem;
             background-color: $clr-light;
@@ -263,6 +272,9 @@ h3{
                 height: 65px;
                 margin-bottom: 0.5rem;
                 border-radius: 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
         
@@ -275,17 +287,17 @@ h3{
 
 
 .correct{
-    background-color: green;
+    background-color: rgb(198,239,206);
 }
 .false{
-    background-color: red;
+    background-color: rgb(255,199,206);
 }
 .flee{
     cursor: not-allowed;
 }
 
 .selected{
-    background-color: blue;
+    background-color: rgb(255,235,156);
 }
 .next {
     display: none;
@@ -294,6 +306,12 @@ h3{
     display: none;
 }
 
+.restart{
+    display: none;
+}
+.highlight{
+    font-weight: $fw-bold;
+}
 // .progContainer{
 //     width: 200px;
 //     border: 1px solid purple;

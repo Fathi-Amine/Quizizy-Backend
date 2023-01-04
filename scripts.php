@@ -16,11 +16,13 @@ if(isset($_POST['userAnswers'])){
 
 function getquests(){
     $test = Questions::getquestions();
+    shuffle($test);
     return $test;
 }
 
 function correctAnswers(){
     $corrects = Questions::getCorrectAnswers();
+
     return $corrects;
 }
 // echo json_encode(getquests());
@@ -46,6 +48,7 @@ function validateAnswers($arr){
       $score += 0;
     }
   }
+  
   $str=implode(',', $arra);
   $str1=implode(',', $arra1);
   $result = Questions::getWrongAnswers($str, $str1);
